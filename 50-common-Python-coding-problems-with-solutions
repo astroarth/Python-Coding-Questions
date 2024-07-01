@@ -1,3 +1,61 @@
+List of 50 coding questions (easy, medium, hard) in Python: 
+
+### Easy ###
+Reverse a String
+Check if a Number is Even or Odd
+Find the Largest Number in a List
+Calculate the Sum of a List
+Check if a String is a Palindrome
+Find the Factorial of a Number
+Generate Fibonacci Sequence
+Check if a Year is a Leap Year
+Find the Length of a List
+Convert Celsius to Fahrenheit
+Count Vowels in a String
+Check if a List is Sorted
+Find the Minimum Number in a List
+Merge Two Lists
+Remove Duplicates from a List
+Find Common Elements in Two Lists
+Check if a List Contains a Specific Element
+Find the GCD of Two Numbers
+Find the LCM of Two Numbers
+Check if a Number is Prime
+
+### Medium ###
+Find the Second Largest Number in a List
+Rotate a List
+Find the Intersection of Two Lists
+Find the Union of Two Lists
+Check if Two Strings are Anagrams
+Find the Missing Number in a List
+Check if a String is a Pangram
+Generate all Permutations of a List
+Find the Longest Word in a Sentence
+Count the Occurrences of Each Element in a List
+Group Anagrams Together
+Find the Majority Element in a List
+Calculate the Product of All Elements in a List
+Find the First Non-Repeated Character in a String
+Reverse the Words in a Sentence
+Find the Longest Increasing Subsequence in a List
+Find the Largest Sum Contiguous Subarray (Kadane’s Algorithm)
+Find the Smallest Window in a String Containing All Characters of Another String
+Sort a List of Tuples Based on the Second Element
+Check if a List of Words Can Form a Circle
+
+### Hard ### 
+Find All Possible Combinations of Numbers that Sum to a Target
+Find the Longest Palindromic Substring
+Find the Median of Two Sorted Arrays
+Word Ladder: Find the Length of the Shortest Transformation Sequence
+Find the Maximum Path Sum in a Binary Tree
+Serialize and Deserialize a Binary Tree
+Find the Lowest Common Ancestor of Two Nodes in a Binary Tree
+Course Schedule: Determine if You Can Finish All Courses
+Edit Distance: Calculate the Minimum Edit Distance Between Two Strings
+Sliding Window Maximum: Find the Maximum Value in Each Sliding Window of Size k
+
 ### Easy
 
 1. **Reverse a String**
