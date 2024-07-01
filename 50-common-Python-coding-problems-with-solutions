@@ -1,0 +1,766 @@
+### Easy
+
+1. **Reverse a String**
+
+```python
+def reverse_string(s):
+    return s[::-1]
+
+# Test
+print(reverse_string("hello"))  # Output: "ollelo"
+```
+
+2. **Check if a Number is Even or Odd**
+
+```python
+def is_even(n):
+    return n % 2 == 0
+
+# Test
+print(is_even(4))  # Output: True
+print(is_even(7))  # Output: False
+```
+
+3. **Find the Largest Number in a List**
+
+```python
+def find_largest(nums):
+    return max(nums)
+
+# Test
+print(find_largest([1, 2, 3, 4, 5]))  # Output: 5
+```
+
+4. **Calculate the Sum of a List**
+
+```python
+def sum_of_list(nums):
+    return sum(nums)
+
+# Test
+print(sum_of_list([1, 2, 3, 4, 5]))  # Output: 15
+```
+
+5. **Check if a String is a Palindrome**
+
+```python
+def is_palindrome(s):
+    return s == s[::-1]
+
+# Test
+print(is_palindrome("radar"))  # Output: True
+print(is_palindrome("hello"))  # Output: False
+```
+
+6. **Find the Factorial of a Number**
+
+```python
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+# Test
+print(factorial(5))  # Output: 120
+```
+
+7. **Generate Fibonacci Sequence**
+
+```python
+def fibonacci(n):
+    sequence = [0, 1]
+    for i in range(2, n):
+        sequence.append(sequence[-1] + sequence[-2])
+    return sequence
+
+# Test
+print(fibonacci(10))  # Output: [0, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+```
+
+8. **Check if a Year is a Leap Year**
+
+```python
+def is_leap_year(year):
+    return (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)
+
+# Test
+print(is_leap_year(2020))  # Output: True
+print(is_leap_year(2021))  # Output: False
+```
+
+9. **Find the Length of a List**
+
+```python
+def list_length(lst):
+    return len(lst)
+
+# Test
+print(list_length([1, 2, 3, 4]))  # Output: 4
+```
+
+10. **Convert Celsius to Fahrenheit**
+
+```python
+def celsius_to_fahrenheit(celsius):
+    return (celsius * 9/5) + 32
+
+# Test
+print(celsius_to_fahrenheit(0))  # Output: 32.0
+print(celsius_to_fahrenheit(100))  # Output: 212.0
+```
+
+11. **Count Vowels in a String**
+
+```python
+def count_vowels(s):
+    vowels = "aeiouAEIOU"
+    return sum(1 for char in s if char in vowels)
+
+# Test
+print(count_vowels("hello"))  # Output: 2
+print(count_vowels("python"))  # Output: 1
+```
+
+12. **Check if a List is Sorted**
+
+```python
+def is_sorted(lst):
+    return lst == sorted(lst)
+
+# Test
+print(is_sorted([1, 2, 3, 4]))  # Output: True
+print(is_sorted([4, 3, 2, 1]))  # Output: False
+```
+
+13. **Find the Minimum Number in a List**
+
+```python
+def find_minimum(nums):
+    return min(nums)
+
+# Test
+print(find_minimum([1, 2, 3, 4, 5]))  # Output: 1
+```
+
+14. **Merge Two Lists**
+
+```python
+def merge_lists(lst1, lst2):
+    return lst1 + lst2
+
+# Test
+print(merge_lists([1, 2], [3, 4]))  # Output: [1, 2, 3, 4]
+```
+
+15. **Remove Duplicates from a List**
+
+```python
+def remove_duplicates(lst):
+    return list(set(lst))
+
+# Test
+print(remove_duplicates([1, 2, 2, 3, 4, 4]))  # Output: [1, 2, 3, 4]
+```
+
+16. **Find Common Elements in Two Lists**
+
+```python
+def common_elements(lst1, lst2):
+    return list(set(lst1) & set(lst2))
+
+# Test
+print(common_elements([1, 2, 3], [3, 4, 5]))  # Output: [3]
+```
+
+17. **Check if a List Contains a Specific Element**
+
+```python
+def contains_element(lst, elem):
+    return elem in lst
+
+# Test
+print(contains_element([1, 2, 3], 2))  # Output: True
+print(contains_element([1, 2, 3], 4))  # Output: False
+```
+
+18. **Find the GCD of Two Numbers**
+
+```python
+import math
+
+def gcd(a, b):
+    return math.gcd(a, b)
+
+# Test
+print(gcd(12, 15))  # Output: 3
+```
+
+19. **Find the LCM of Two Numbers**
+
+```python
+def lcm(a, b):
+    return abs(a * b) // math.gcd(a, b)
+
+# Test
+print(lcm(12, 15))  # Output: 60
+```
+
+20. **Check if a Number is Prime**
+
+```python
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+# Test
+print(is_prime(11))  # Output: True
+print(is_prime(4))  # Output: False
+```
+
+### Medium
+
+21. **Find the Second Largest Number in a List**
+
+```python
+def second_largest(nums):
+    unique_nums = list(set(nums))
+    unique_nums.sort()
+    return unique_nums[-2]
+
+# Test
+print(second_largest([1, 2, 3, 4, 5]))  # Output: 4
+```
+
+22. **Rotate a List**
+
+```python
+def rotate_list(lst, k):
+    k %= len(lst)
+    return lst[-k:] + lst[:-k]
+
+# Test
+print(rotate_list([1, 2, 3, 4, 5], 2))  # Output: [4, 5, 1, 2, 3]
+```
+
+23. **Find the Intersection of Two Lists**
+
+```python
+def intersection(lst1, lst2):
+    return list(set(lst1) & set(lst2))
+
+# Test
+print(intersection([1, 2, 3], [3, 4, 5]))  # Output: [3]
+```
+
+24. **Find the Union of Two Lists**
+
+```python
+def union(lst1, lst2):
+    return list(set(lst1) | set(lst2))
+
+# Test
+print(union([1, 2, 3], [3, 4, 5]))  # Output: [1, 2, 3, 4, 5]
+```
+
+25. **Check if Two Strings are Anagrams**
+
+```python
+def are_anagrams(s1, s2):
+    return sorted(s1) == sorted(s2)
+
+# Test
+print(are_anagrams("listen", "silent"))  # Output: True
+print(are_anagrams("hello", "world"))  # Output: False
+```
+
+26. **Find the Missing Number in a List**
+
+```python
+def find_missing_number(nums):
+    n = len(nums) + 1
+    total = n * (n + 1) // 2
+    return total - sum(nums)
+
+# Test
+print(find_missing_number([1, 2, 3, 5]))  # Output: 4
+```
+
+27. **Check if a String is a Pangram**
+
+```python
+import string
+
+def is_pangram(s):
+    return set(string.ascii_lowercase) <= set(s.lower())
+
+# Test
+print(is_pangram("The quick brown fox jumps over the lazy dog"))  # Output: True
+```
+
+28. **Generate all Permutations of a List**
+
+```python
+import itertools
+
+def generate_permutations(lst):
+    return list(itertools.permutations(lst))
+
+# Test
+print(generate_permutations([1, 2, 3]))  
+# Output: [(1, 2, 3), (1, 3, 2), (2, 1, 3), (2, 3, 1), (3, 1, 2), (3, 2, 1)]
+```
+
+29. **Find the Longest Word in a Sentence**
+
+```python
+def longest_word(sentence):
+    words = sentence.split()
+    return max(words, key=len)
+
+# Test
+print(longest_word("The quick brown fox"))  # Output: "quick"
+```
+
+30. **Count the Occurrences of Each
+
+ Element in a List**
+
+```python
+from collections import Counter
+
+def count_occurrences(lst):
+    return Counter(lst)
+
+# Test
+print(count_occurrences([1, 2, 2, 3, 3, 3]))  
+# Output: Counter({3: 3, 2: 2, 1: 1})
+```
+
+31. **Group Anagrams Together**
+
+```python
+from collections import defaultdict
+
+def group_anagrams(words):
+    anagrams = defaultdict(list)
+    for word in words:
+        key = tuple(sorted(word))
+        anagrams[key].append(word)
+    return list(anagrams.values())
+
+# Test
+print(group_anagrams(["eat", "tea", "tan", "ate", "nat", "bat"]))  
+# Output: [['eat', 'tea', 'ate'], ['tan', 'nat'], ['bat']]
+```
+
+32. **Find the Majority Element in a List**
+
+```python
+def majority_element(nums):
+    count = Counter(nums)
+    return max(count.keys(), key=count.get)
+
+# Test
+print(majority_element([3, 2, 3]))  # Output: 3
+```
+
+33. **Calculate the Product of All Elements in a List**
+
+```python
+def product_of_list(lst):
+    product = 1
+    for num in lst:
+        product *= num
+    return product
+
+# Test
+print(product_of_list([1, 2, 3, 4]))  # Output: 24
+```
+
+34. **Find the First Non-Repeated Character in a String**
+
+```python
+def first_non_repeated_char(s):
+    count = Counter(s)
+    for char in s:
+        if count[char] == 1:
+            return char
+    return None
+
+# Test
+print(first_non_repeated_char("swiss"))  # Output: "w"
+```
+
+35. **Reverse the Words in a Sentence**
+
+```python
+def reverse_words(sentence):
+    return ' '.join(sentence.split()[::-1])
+
+# Test
+print(reverse_words("The quick brown fox"))  # Output: "fox brown quick The"
+```
+
+36. **Find the Longest Increasing Subsequence in a List**
+
+```python
+def longest_increasing_subsequence(nums):
+    if not nums:
+        return []
+    lis = [nums[0]]
+    for num in nums[1:]:
+        if num > lis[-1]:
+            lis.append(num)
+        else:
+            lis[bisect.bisect_left(lis, num)] = num
+    return lis
+
+# Test
+print(longest_increasing_subsequence([10, 9, 2, 5, 3, 7, 101, 18]))  
+# Output: [2, 3, 7, 18]
+```
+
+37. **Find the Largest Sum Contiguous Subarray (Kadane’s Algorithm)**
+
+```python
+def max_subarray_sum(nums):
+    max_current = max_global = nums[0]
+    for num in nums[1:]:
+        max_current = max(num, max_current + num)
+        if max_current > max_global:
+            max_global = max_current
+    return max_global
+
+# Test
+print(max_subarray_sum([-2, 1, -3, 4, -1, 2, 1, -5, 4]))  # Output: 6
+```
+
+38. **Find the Smallest Window in a String Containing All Characters of Another String**
+
+```python
+def min_window(s, t):
+    if not t or not s:
+        return ""
+    dict_t = Counter(t)
+    required = len(dict_t)
+    l, r = 0, 0
+    formed = 0
+    window_counts = {}
+    ans = float("inf"), None, None
+    while r < len(s):
+        char = s[r]
+        window_counts[char] = window_counts.get(char, 0) + 1
+        if char in dict_t and window_counts[char] == dict_t[char]:
+            formed += 1
+        while l <= r and formed == required:
+            char = s[l]
+            if r - l + 1 < ans[0]:
+                ans = (r - l + 1, l, r)
+            window_counts[char] -= 1
+            if char in dict_t and window_counts[char] < dict_t[char]:
+                formed -= 1
+            l += 1
+        r += 1
+    return "" if ans[0] == float("inf") else s[ans[1]: ans[2] + 1]
+
+# Test
+print(min_window("ADOBECODEBANC", "ABC"))  # Output: "BANC"
+```
+
+39. **Sort a List of Tuples Based on the Second Element**
+
+```python
+def sort_tuples(tuples):
+    return sorted(tuples, key=lambda x: x[1])
+
+# Test
+print(sort_tuples([(1, 3), (3, 2), (2, 1)]))  # Output: [(2, 1), (3, 2), (1, 3)]
+```
+
+40. **Check if a List of Words Can Form a Circle**
+
+```python
+from collections import defaultdict, deque
+
+def can_form_circle(words):
+    def dfs(word):
+        visited.add(word)
+        for next_word in graph[word[-1]]:
+            if next_word not in visited:
+                dfs(next_word)
+
+    graph = defaultdict(list)
+    for word in words:
+        graph[word[0]].append(word)
+    
+    visited = set()
+    dfs(words[0])
+    return len(visited) == len(words)
+
+# Test
+print(can_form_circle(["abc", "cde", "efg", "gfa"]))  # Output: True
+```
+
+### Hard
+
+41. **Find All Possible Combinations of Numbers that Sum to a Target**
+
+```python
+def combination_sum(nums, target):
+    def backtrack(start, target, path):
+        if target == 0:
+            result.append(path)
+            return
+        for i in range(start, len(nums)):
+            if nums[i] > target:
+                break
+            backtrack(i, target - nums[i], path + [nums[i]])
+    
+    nums.sort()
+    result = []
+    backtrack(0, target, [])
+    return result
+
+# Test
+print(combination_sum([2, 3, 6, 7], 7))  # Output: [[2, 2, 3], [7]]
+```
+
+42. **Find the Longest Palindromic Substring**
+
+```python
+def longest_palindromic_substring(s):
+    def expand_around_center(left, right):
+        while left >= 0 and right < len(s) and s[left] == s[right]:
+            left -= 1
+            right += 1
+        return s[left + 1:right]
+    
+    result = ""
+    for i in range(len(s)):
+        odd = expand_around_center(i, i)
+        even = expand_around_center(i, i + 1)
+        result = max(result, odd, even, key=len)
+    return result
+
+# Test
+print(longest_palindromic_substring("babad"))  # Output: "bab" or "aba"
+```
+
+43. **Find the Median of Two Sorted Arrays**
+
+```python
+def find_median_sorted_arrays(nums1, nums2):
+    A, B = sorted((nums1, nums2), key=len)
+    m, n = len(A), len(B)
+    imin, imax, half_len = 0, m, (m + n + 1) // 2
+    while imin <= imax:
+        i = (imin + imax) // 2
+        j = half_len - i
+        if i < m and B[j-1] > A[i]:
+            imin = i + 1
+        elif i > 0 and A[i-1] > B[j]:
+            imax = i - 1
+        else:
+            if i == 0: max_of_left = B[j-1]
+            elif j == 0: max_of_left = A[i-1]
+            else: max_of_left = max(A[i-1], B[j-1])
+            if (m + n) % 2 == 1:
+                return max_of_left
+            if i == m: min_of_right = B[j]
+            elif j == n: min_of_right = A[i]
+            else: min_of_right = min(A[i], B[j])
+            return (max_of_left + min_of_right) / 2.0
+
+# Test
+print(find_median_sorted_arrays([1, 3], [2]))  # Output: 2.0
+print(find_median_sorted_arrays([1, 2], [3, 4]))  # Output: 2.5
+```
+
+44. **Word Ladder: Find the Length of the Shortest Transformation Sequence**
+
+```python
+from collections import deque
+
+def word_ladder_length(beginWord, endWord, wordList):
+    wordSet = set(wordList)
+    if endWord not in wordSet:
+        return 0
+    queue = deque([(beginWord, 1)])
+    while queue:
+        word, length = queue.popleft()
+        if word == endWord:
+            return length
+        for i in range(len(word)):
+            for c in 'abcdefghijklmnopqrstuvwxyz':
+                new_word = word[:i] + c + word[i + 1:]
+                if new_word in wordSet:
+                    wordSet.remove(new_word)
+                    queue.append((new_word, length + 1))
+    return 0
+
+# Test
+print(word_ladder_length("hit", "cog",
+
+ ["hot","dot","dog","lot","log","cog"]))  # Output: 5
+```
+
+45. **Find the Maximum Path Sum in a Binary Tree**
+
+```python
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def max_path_sum(root):
+    def max_gain(node):
+        nonlocal max_sum
+        if not node:
+            return 0
+        left_gain = max(max_gain(node.left), 0)
+        right_gain = max(max_gain(node.right), 0)
+        price_newpath = node.val + left_gain + right_gain
+        max_sum = max(max_sum, price_newpath)
+        return node.val + max(left_gain, right_gain)
+    
+    max_sum = float('-inf')
+    max_gain(root)
+    return max_sum
+
+# Test
+root = TreeNode(1, TreeNode(2), TreeNode(3))
+print(max_path_sum(root))  # Output: 6
+```
+
+46. **Serialize and Deserialize a Binary Tree**
+
+```python
+class Codec:
+    def serialize(self, root):
+        def dfs(node):
+            if not node:
+                vals.append('#')
+                return
+            vals.append(str(node.val))
+            dfs(node.left)
+            dfs(node.right)
+        
+        vals = []
+        dfs(root)
+        return ' '.join(vals)
+
+    def deserialize(self, data):
+        def dfs():
+            val = next(vals)
+            if val == '#':
+                return None
+            node = TreeNode(int(val))
+            node.left = dfs()
+            node.right = dfs()
+            return node
+
+        vals = iter(data.split())
+        return dfs()
+
+# Test
+codec = Codec()
+root = TreeNode(1, TreeNode(2), TreeNode(3, TreeNode(4), TreeNode(5)))
+data = codec.serialize(root)
+print(data)  # Output: "1 2 # # 3 4 # # 5 # #"
+root = codec.deserialize(data)
+print(codec.serialize(root))  # Output: "1 2 # # 3 4 # # 5 # #"
+```
+
+47. **Find the Lowest Common Ancestor of Two Nodes in a Binary Tree**
+
+```python
+def lowest_common_ancestor(root, p, q):
+    if not root or root == p or root == q:
+        return root
+    left = lowest_common_ancestor(root.left, p, q)
+    right = lowest_common_ancestor(root.right, p, q)
+    if left and right:
+        return root
+    return left if left else right
+
+# Test
+root = TreeNode(3, TreeNode(5, TreeNode(6), TreeNode(2, TreeNode(7), TreeNode(4))), TreeNode(1, TreeNode(0), TreeNode(8)))
+p = root.left  # 5
+q = root.left.right.right  # 4
+print(lowest_common_ancestor(root, p, q).val)  # Output: 5
+```
+
+48. **Course Schedule: Determine if You Can Finish All Courses**
+
+```python
+def can_finish(numCourses, prerequisites):
+    graph = defaultdict(list)
+    indegree = [0] * numCourses
+    for dest, src in prerequisites:
+        graph[src].append(dest)
+        indegree[dest] += 1
+    queue = deque([i for i in range(numCourses) if indegree[i] == 0])
+    visited = 0
+    while queue:
+        node = queue.popleft()
+        visited += 1
+        for neighbor in graph[node]:
+            indegree[neighbor] -= 1
+            if indegree[neighbor] == 0:
+                queue.append(neighbor)
+    return visited == numCourses
+
+# Test
+print(can_finish(2, [[1, 0]]))  # Output: True
+print(can_finish(2, [[1, 0], [0, 1]]))  # Output: False
+```
+
+49. **Edit Distance: Calculate the Minimum Edit Distance Between Two Strings**
+
+```python
+def min_distance(word1, word2):
+    dp = [[0] * (len(word2) + 1) for _ in range(len(word1) + 1)]
+    for i in range(len(word1) + 1):
+        for j in range(len(word2) + 1):
+            if i == 0:
+                dp[i][j] = j
+            elif j == 0:
+                dp[i][j] = i
+            elif word1[i - 1] == word2[j - 1]:
+                dp[i][j] = dp[i - 1][j - 1]
+            else:
+                dp[i][j] = 1 + min(dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1])
+    return dp[len(word1)][len(word2)]
+
+# Test
+print(min_distance("horse", "ros"))  # Output: 3
+print(min_distance("intention", "execution"))  # Output: 5
+```
+
+50. **Sliding Window Maximum: Find the Maximum Value in Each Sliding Window of Size k**
+
+```python
+from collections import deque
+
+def max_sliding_window(nums, k):
+    deq = deque()
+    result = []
+    for i, num in enumerate(nums):
+        while deq and deq[0] < i - k + 1:
+            deq.popleft()
+        while deq and nums[deq[-1]] < num:
+            deq.pop()
+        deq.append(i)
+        if i >= k - 1:
+            result.append(nums[deq[0]])
+    return result
+
+# Test
+print(max_sliding_window([1,3,-1,-3,5,3,6,7], 3))  # Output: [3, 3, 5, 5, 6, 7]
+```
